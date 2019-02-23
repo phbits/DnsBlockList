@@ -24,9 +24,6 @@ Description = 'This PowerShell module was created to automate the aggregation of
 # Minimum version of the Windows PowerShell engine required by this module
 PowerShellVersion = '5.0'
 
-# Modules that must be imported into the global environment prior to importing this module
-RequiredModules = 'DnsServer'
-
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
 FunctionsToExport = 'Invoke-DnsBlockList',
 					'Clear-DnsBlockListQRP',
@@ -47,6 +44,8 @@ PrivateData = @{
 
     PSData = @{
 
+	ExternalModuleDependencies = 'DnsServer'
+	
         # Tags applied to this module. These help with module discovery in online galleries.
         Tags = 'DNS','Domain','Block','Security','QRP'
 
